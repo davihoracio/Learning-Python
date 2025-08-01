@@ -1,0 +1,20 @@
+import random
+
+while True:
+    jogada = input("Digite sua jogada (pedra, papel ou tesoura) ou 'sair' para encerrar: ").lower()
+    if jogada == 'sair':
+        print("Jogo encerrado.")
+        break
+    if jogada not in ['pedra', 'papel', 'tesoura']:
+        print("Jogada inválida! Tente novamente.")
+        continue
+    computador = random.choice(['pedra', 'papel', 'tesoura'])
+    print(f"Computador jogou: {computador}")
+    if jogada == computador:
+        print("Empate!")
+    elif (jogada == 'pedra' and computador == 'tesoura') or \
+         (jogada == 'papel' and computador == 'pedra') or \
+         (jogada == 'tesoura' and computador == 'papel'):
+        print("Você ganhou!")
+    else:
+        print("Você perdeu!")

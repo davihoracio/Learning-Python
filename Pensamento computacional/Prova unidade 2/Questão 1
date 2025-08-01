@@ -1,0 +1,30 @@
+prioridade1 = []
+prioridade2 = []
+prioridade3 = []
+
+while True:
+    tarefa = input("Digite a tarefa (ou 'fim' para encerrar): ")
+    if tarefa.lower() == 'fim':
+        break
+
+    prioridade = input("Digite a prioridade (1 = alta, 2 = média, 3 = baixa): ")
+
+    if prioridade == '1':
+        prioridade1.append(tarefa)
+    elif prioridade == '2':
+        prioridade2.append(tarefa)
+    elif prioridade == '3':
+        prioridade3.append(tarefa)
+    else:
+        print("Prioridade inválida! Digite 1, 2 ou 3.")
+print("\nTarefas por Prioridade:")
+print("\nPrioridade Alta(1):")
+for t in prioridade1:
+    print(f"- {t}")
+print("\nPrioridade Média(2):")
+for t in prioridade2:
+    print(f"- {t}")
+print("\nPrioridade Baixa(3):")
+for t in prioridade3:
+    print(f"- {t}")
+
